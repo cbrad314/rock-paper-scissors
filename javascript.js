@@ -21,3 +21,30 @@ function computerPlay () {
         return 'Something went wrong...'
     }
 }
+
+function determineWinner (playerSelection,computerSelection){
+    
+    if (playerSelection===computerSelection){
+        return `${playerSelection} vs ${computerSelection} results in a tie!!`;
+    }
+    else if (playerSelection==='paper'&&computerSelection==='scissors') {
+        return `${computerSelection} beats ${playerSelection}. You lose!`;
+    }
+    else if (playerSelection==='rock'&&computerSelection==='paper') {
+        return `${computerSelection} beats ${playerSelection}. You lose!`;
+    }
+    else if (playerSelection==='scissors'&&computerSelection==='rock') {
+        return `${computerSelection} beats ${playerSelection}. You lose!`;
+    }
+    else if (playerSelection==='scissors'&&computerSelection==='paper') {
+        return `${playerSelection} beats ${computerSelection}. You win!`;
+    }
+    else if (playerSelection==='paper'&&computerSelection==='rock') {
+        return `${playerSelection} beats ${computerSelection}. You win!`;
+    }
+    else if (playerSelection==='rock'&&computerSelection==='scissors') {
+        return `${playerSelection} beats ${computerSelection}. You win!`;
+    }
+    else {return 'Something went wrong...'}
+}
+console.log(determineWinner(playerSelection,computerSelection));
