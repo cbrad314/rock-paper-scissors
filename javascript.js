@@ -1,6 +1,6 @@
-let playerPrompt = prompt('Rock, Paper, Scissors, Go!!','');
-let playerSelection = playerPrompt.toLowerCase();
-let computerSelection = computerPlay();
+let playerPrompt;
+let playerSelection;
+let computerSelection;
 function computerPlay () {
     function getRandomInt(min, max) {
         min = Math.ceil(min);
@@ -22,8 +22,10 @@ function computerPlay () {
     }
 }
 
-function determineWinner (playerSelection,computerSelection){
-    
+function playRound (playerSelection,computerSelection){
+    playerPrompt = prompt('Rock, Paper, Scissors, Go!!','');
+    playerSelection = playerPrompt.toLowerCase();
+    computerSelection = computerPlay();
     if (playerSelection===computerSelection){
         return `${playerSelection} vs ${computerSelection} results in a tie!!`;
     }
@@ -47,4 +49,11 @@ function determineWinner (playerSelection,computerSelection){
     }
     else {return 'Something went wrong...'}
 }
-console.log(determineWinner(playerSelection,computerSelection));
+
+function game(){
+    for (let i=0;i<5; i++) {
+        console.log(playRound(playerSelection,computerSelection));
+    }
+}
+
+game();
