@@ -1,3 +1,5 @@
+let playerPrompt = prompt('Rock, Paper, Scissors, Go!!','');
+let playerSelection = playerPrompt.toLowerCase();
 let computerSelection = computerPlay();
 function computerPlay () {
     function getRandomInt(min, max) {
