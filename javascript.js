@@ -30,7 +30,7 @@ function playRound (event){
     playerSelection = event.target.id;
     computerSelection = computerPlay();
     let playRoundResult = 0;
-    let allDivs = document.querySelectorAll('div');
+    let allDivs = body.querySelectorAll('div');
     if (allDivs) {allDivs.forEach(div => {body.removeChild(div)});}
         // body.removeChild(allDiv);}
     let div1 = document.createElement('div');
